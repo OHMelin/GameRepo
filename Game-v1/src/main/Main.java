@@ -11,11 +11,14 @@ public class Main {
 
 		//Initialize
 		Map board = new Map();
-		Health health = new Health();
+		Health playerHealth = new Health();
+		Health enemyHealth = new Health();
 		Experience experience = new Experience();
 		Player player = new Player("Oliver");
+		Enemy enemy = new Enemy("Orc", 5.5);
 		
-		player.setHealth(health);
+		enemy.setHealth(enemyHealth);
+		player.setHealth(playerHealth);
 		player.setExperience(experience);
 		
 		
