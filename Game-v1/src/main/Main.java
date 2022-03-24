@@ -20,10 +20,9 @@ public class Main {
 		
 		
 		
-		//Test health bar
-		System.out.println(health.displayHealthBar());
 		//Test the map
 		board.updateDrawMap();
+		System.out.println();
 		//Test the player printAll
 		player.printAll();
 		
