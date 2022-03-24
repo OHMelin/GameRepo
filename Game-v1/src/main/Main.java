@@ -25,7 +25,7 @@ public class Main {
 		
 		
 
-		board.drawMap();
+		board.updateDrawMap();
 		System.out.println();
 		System.out.println(health1.displayHealthBar());
 

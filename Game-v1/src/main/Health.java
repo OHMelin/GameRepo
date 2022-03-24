@@ -3,10 +3,12 @@ package main;
 public class Health {
 	double maxHealth;
 	double currentHealth;
+	boolean isAlive;
 	
 	public Health() {
 		maxHealth = 100;
 		currentHealth = 100;
+		isAlive = true;
 	}
 	
 	//Getters
@@ -16,6 +18,9 @@ public class Health {
 	public double getCurrentHealth() {
 		return currentHealth;
 	}
+	public boolean getIsAlive() {
+		return isAlive;
+	}
 	
 	//Setters
 	public void setHealth(double maxHealth) {
@@ -23,6 +28,9 @@ public class Health {
 	}
 	public void setCurrentHealth(double currentHealth) {
 		this.currentHealth = currentHealth;
+	}
+	public void setIsAlive(boolean isAlive) {
+		this.isAlive = isAlive;
 	}
 	
 	//Adders
@@ -32,6 +40,25 @@ public class Health {
 		} else {
 			currentHealth += amount;
 		}
+	}
+	
+	//Subtracters
+	public void takeHealth(double amount) {
+		if(currentHealth - amount <= 0) {
+			dead();
+		} else {
+			currentHealth -= amount;
+		}
+	}
+	
+	//Death event
+	public void dead() {
+		isAlive = false;
+		currentHealth = 0;
+
+		System.out.println("########################################");
+		System.out.println("#               You died!              #");
+		System.out.println("########################################");
 	}
 	
 	//Display health bar
