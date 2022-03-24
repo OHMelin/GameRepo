@@ -69,18 +69,19 @@ public class Health {
 	 * Then I print . for every j left. Which is 4 (10-6)
 	 * At last I print the end of the string and return the full string
 	 */
-	public String displayHealthBar() {		
-		String full = "[ ";
+	public String displayHealthBar() {
+		String full = "[";
 		int j = 10;
+		double percentage = (currentHealth/maxHealth)*100;
 		
-		for(int i = 0; i < currentHealth/10; i++) {
+		for(int i = 0; i < percentage/10; i++) {
 			full += "|";
 			j--;
 		}
 		for(int i = 0; i < j; i++) {
 			full += ".";
 		}
-		full += " ]";
+		full += "]";
 		
 		return full;
 	}

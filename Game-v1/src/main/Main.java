@@ -15,15 +15,13 @@ public class Main {
 		Experience experience = new Experience();
 		Player player = new Player("Oliver");
 		
-		
-		
+		player.setHealth(health);
+		player.setExperience(experience);
 		
 		
 		
 		//Test health bar
 		System.out.println(health.displayHealthBar());
-		//Test add level
-		experience.addLvl();
 		//Test the map
 		board.updateDrawMap();
 		//Test the player printAll
