@@ -10,7 +10,7 @@ public class Enemy {
 		this.name = name;
 		this.damage = damage;
 	}
-	
+	//duiwyaiufguiafyg7iaw
 	
 	//SET OTHER CLASSES
 	public void setHealth(Health health) {
