@@ -1,4 +1,5 @@
 package main;
+import java.util.Scanner;
 
 public class Map {
 //##########Fields###########
@@ -43,14 +44,41 @@ public class Map {
 				}	
 				System.out.println();
 			} 
-		
-		//Map Boundary Checks
-			
-
 	}
 	
+	public void playerMovement() 
+	{	
+		Scanner scanner = new Scanner(System.in);
+		String input = scanner.nextLine();
+	
+		if(input.equals("w")) 
+		{
+		playerRow--;
+		updateDrawMap();
+		}
+	
+		if(input.equals("s")) 
+		{
+		playerRow++;
+		updateDrawMap();
+		}
+	
+		if(input.equals("a")) 
+		{
+		playerCol--;
+		updateDrawMap();
+		}
+	
+		if(input.equals("d")) 
+		{
+		playerCol++;
+		updateDrawMap();
+		}
 	
 	
 }
+
+}
+
 
 
