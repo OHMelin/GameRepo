@@ -11,6 +11,7 @@ public class Enemy {
 		this.damage = damage;
 	}
 	
+	
 	//SET OTHER CLASSES
 	public void setHealth(Health health) {
 		this.health = health;
