@@ -2,7 +2,7 @@ package main;
 import java.util.Scanner;
 
 public class Map {
-//##########Fields###########
+//##########Fields############
 	int playerRow = 3;
 	int playerCol = 1;
 	int enemyRow = 2;
