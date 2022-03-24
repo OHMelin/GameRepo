@@ -43,6 +43,12 @@ public class Experience {
 	public void addLvl() {
 		currentExp -= expToLevel;
 		currentLevel++;
+		System.out.println();
+		System.out.println("########################################");
+		System.out.println("#               Level up!              #");
+		System.out.println("#              New level: " + currentLevel + "            #");
+		System.out.println("########################################");
+		System.out.println();
 	}
 
 	//Display exp bar

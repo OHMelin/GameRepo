@@ -1,5 +1,7 @@
 package main;
 
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
 		System.out.println("########################################");
@@ -7,9 +9,32 @@ public class Main {
 		System.out.println("########################################");
 		System.out.println();
 		
-		Health health1 = new Health();
+		//Initialize
+		Health health = new Health();
+		Experience experience = new Experience();
+		
+		//Test health bar
+		System.out.println(health.displayHealthBar());
+		//Test add level
+		experience.addLvl();
 		
 		
-		System.out.println(health1.displayHealthBar());
+		
+		
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine().toLowerCase();
+		boolean run = true;
+		
+		do {			
+			switch(input) {
+				case "diller": 
+					System.out.println("daller");
+					input = "";
+					break;
+				case "b":
+					System.out.println("kenni");
+					break;
+			}
+		} while (run);
 	}
 }
