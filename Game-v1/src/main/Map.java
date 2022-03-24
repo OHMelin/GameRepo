@@ -4,7 +4,7 @@ public class Map {
 //##########Fields###########
 	
 	
-//######Methods#########
+//######Methods##########
 	public void drawMap() {
 		
 char[][] map = {{'#','#','#','#','#','#'}, 
