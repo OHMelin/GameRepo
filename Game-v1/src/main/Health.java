@@ -4,11 +4,20 @@ public class Health {
 	double maxHealth;
 	double currentHealth;
 	boolean isAlive;
+	boolean isPlayer;
 	
 	public Health() {
 		maxHealth = 100;
 		currentHealth = 100;
 		isAlive = true;
+		isPlayer = true;
+	}
+	
+	public Health(double maxHealth) {
+		this.maxHealth = maxHealth;
+		currentHealth = maxHealth;
+		isAlive = true;
+		isPlayer = false;
 	}
 	
 	//Getters
@@ -45,20 +54,30 @@ public class Health {
 	//Subtracters
 	public void takeHealth(double amount) {
 		if(currentHealth - amount <= 0) {
-			dead();
+			if(isPlayer) {
+				playerDead();
+			} else {
+				enemyDead();
+			}
 		} else {
 			currentHealth -= amount;
 		}
 	}
 	
-	//Death event
-	public void dead() {
+	//Death events
+	public void playerDead() {
 		isAlive = false;
 		currentHealth = 0;
 
 		System.out.println("########################################");
 		System.out.println("#               You died!              #");
 		System.out.println("########################################");
+	}
+	public void enemyDead() {
+		isAlive = false;
+		currentHealth = 0;
+		
+		System.out.println("You killed an enemy!");
 	}
 	
 	//Display health bar
@@ -69,18 +88,19 @@ public class Health {
 	 * Then I print . for every j left. Which is 4 (10-6)
 	 * At last I print the end of the string and return the full string
 	 */
-	public String displayHealthBar() {		
-		String full = "[ ";
+	public String displayHealthBar() {
+		String full = "[";
 		int j = 10;
+		double percentage = (currentHealth/maxHealth)*100;
 		
-		for(int i = 0; i < currentHealth/10; i++) {
+		for(int i = 0; i < percentage/10; i++) {
 			full += "|";
 			j--;
 		}
 		for(int i = 0; i < j; i++) {
 			full += ".";
 		}
-		full += " ]";
+		full += "]";
 		
 		return full;
 	}

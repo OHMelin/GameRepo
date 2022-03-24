@@ -8,7 +8,7 @@ public class Experience {
 	public Experience() {
 		currentExp = 0;
 		currentLevel = 1;
-		expToLevel = 100+currentLevel*2;
+		expToLevel = 100;
 	}
 	
 	//Getters
@@ -60,17 +60,18 @@ public class Experience {
 	 * At last I print the end of the string and return the full string
 	 */
 	public String displayExpBar() {		
-		String full = "[ ";
+		String full = "[";
 		int j = 10;
+		double percentage = (currentExp/expToLevel)*100;
 		
-		for(int i = 0; i < currentExp/10; i++) {
+		for(int i = 0; i < percentage/10; i++) {
 			full += "|";
 			j--;
 		}
 		for(int i = 0; i < j; i++) {
 			full += ".";
 		}
-		full += " ]";
+		full += "]";
 		
 		return full;
 	}	

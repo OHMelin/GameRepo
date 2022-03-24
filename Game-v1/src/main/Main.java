@@ -11,42 +11,6 @@ public class Main {
 
 		//Initialize
 		Map board = new Map();
-		//Health health = new Health();
-		//Experience experience = new Experience();
-		//Player player = new Player("Oliver");
-		Game game = new Game();
-		game.addMap(board);
-		
-		
-		
-		
-		
-		
-		//Test health bar
-		//System.out.println(health.displayHealthBar());
-		//Test add level
-		//experience.addLvl();
-
-
-		
-		
-
-	//Test the map
-
-		//board.updateDrawMap();
-
-
-		//board.updateDrawMap();
-		//board.playerMovement();
-		
-		game.move();
-		
-
-		System.out.println();
-		//System.out.println(health.displayHealthBar());
-
-		//Test the player printAll
-		//player.printAll();
 		
 
 		
