@@ -8,8 +8,12 @@ public class Main {
 		System.out.println();
 		
 		Health health1 = new Health();
+		Map board = new Map();
 		
 		
+		board.drawMap();
+		System.out.println();
 		System.out.println(health1.displayHealthBar());
 	}
 }
+
