@@ -18,6 +18,8 @@ public class Main {
 		
 		
 		
+		
+		
 		//Test health bar
 		System.out.println(health.displayHealthBar());
 		//Test add level

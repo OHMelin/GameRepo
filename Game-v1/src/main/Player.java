@@ -10,6 +10,14 @@ public class Player {
 		this.name = name;
 		damage = 10;
 	}
+	
+	//SET OTHER CLASSES
+	public void setHealth(Health health) {
+		this.health = health;
+	}
+	public void setExperience(Experience experience) {
+		this.experience = experience;
+	}
 
 	//Getters
 	public String getName() {
