@@ -10,7 +10,7 @@ public class Map {
 	
 //######Methods##########
 	
-	//DrawMap
+	//DrawMap#
 	/*
 	 * We have a two dimensional Array called "map" which contains data type of "char" which creates a matrix - row and column
 	 * We use a nested for loop to go through each row and print it's columns.
