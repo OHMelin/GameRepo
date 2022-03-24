@@ -1,3 +1,2 @@
-# gameTest
-Testing GitHub java game collab thing
-dab lmao first change from Eclipse :sunglasses:
+# Game-v1
+kenni bruger dab og gg som variable names 🥴🥴🥴
