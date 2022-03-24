@@ -9,6 +9,7 @@ public class Main {
 		
 		Health health1 = new Health();
 		
+		
 		System.out.println(health1.displayHealthBar());
 	}
 }
