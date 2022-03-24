@@ -25,7 +25,12 @@ public class Main {
 		
 		
 
+<<<<<<< Upstream, based on origin/main
 		board.updateDrawMap();
+=======
+		//board.updateDrawMap();
+		board.playerMovement();
+>>>>>>> 537c208 rff
 		System.out.println();
 		System.out.println(health1.displayHealthBar());
 
