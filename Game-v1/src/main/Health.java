@@ -4,11 +4,20 @@ public class Health {
 	double maxHealth;
 	double currentHealth;
 	boolean isAlive;
+	boolean isPlayer;
 	
 	public Health() {
 		maxHealth = 100;
 		currentHealth = 100;
 		isAlive = true;
+		isPlayer = true;
+	}
+	
+	public Health(double maxHealth) {
+		this.maxHealth = maxHealth;
+		currentHealth = maxHealth;
+		isAlive = true;
+		isPlayer = false;
 	}
 	
 	//Getters
@@ -45,20 +54,30 @@ public class Health {
 	//Subtracters
 	public void takeHealth(double amount) {
 		if(currentHealth - amount <= 0) {
-			dead();
+			if(isPlayer) {
+				playerDead();
+			} else {
+				enemyDead();
+			}
 		} else {
 			currentHealth -= amount;
 		}
 	}
 	
-	//Death event
-	public void dead() {
+	//Death events
+	public void playerDead() {
 		isAlive = false;
 		currentHealth = 0;
 
 		System.out.println("########################################");
 		System.out.println("#               You died!              #");
 		System.out.println("########################################");
+	}
+	public void enemyDead() {
+		isAlive = false;
+		currentHealth = 0;
+		
+		System.out.println("You killed an enemy!");
 	}
 	
 	//Display health bar
