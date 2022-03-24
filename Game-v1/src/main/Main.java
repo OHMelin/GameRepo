@@ -8,30 +8,29 @@ public class Main {
 		System.out.println("#      Welcome to the game player!     #");
 		System.out.println("########################################");
 		System.out.println();
-		
-
-		Health health1 = new Health();
-		Map board = new Map();
 
 		//Initialize
+		Map board = new Map();
 		Health health = new Health();
 		Experience experience = new Experience();
+		Player player = new Player("Oliver");
+		
+		
+		
 		
 		//Test health bar
 		System.out.println(health.displayHealthBar());
 		//Test add level
 		experience.addLvl();
-
-		
-		
-
+		//Test the map
 		board.updateDrawMap();
-		System.out.println();
-		System.out.println(health1.displayHealthBar());
+		//Test the player printAll
+		player.printAll();
+		
 
 		
 		
-		Scanner sc = new Scanner(System.in);
+		/*Scanner sc = new Scanner(System.in);
 		String input = sc.nextLine().toLowerCase();
 		boolean run = true;
 		
@@ -48,7 +47,7 @@ public class Main {
 					input = "";
 					break;
 			}
-		} while (run);
+		} while (run);*/
 
 	}
 }
