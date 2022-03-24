@@ -44,7 +44,6 @@ public class Player {
 		System.out.println(" Name: " + name);
 		System.out.println(" Damage: " + damage);
 		System.out.println(" Health: " + health.displayHealthBar() + " (" + health.getCurrentHealth() + "/" + health.getMaxHealth() + ")");
-		System.out.println(" Level: " + experience.getCurrentLevel() + " " + experience.displayExpBar() + " (" + experience.getCurrentExp() + "/" + experience.getExpToLevel()+ ")");
 		System.out.println();
 		System.out.println("########################################");
 	}

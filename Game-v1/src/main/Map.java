@@ -1,7 +1,8 @@
 package main;
+import java.util.Scanner;
 
 public class Map {
-//##########Fields###########
+//##########Fields############
 	int playerRow = 3;
 	int playerCol = 1;
 	int enemyRow = 2;
@@ -9,7 +10,7 @@ public class Map {
 	
 //######Methods##########
 	
-	//DrawMap
+	//DrawMap##
 	/*
 	 * We have a two dimensional Array called "map" which contains data type of "char" which creates a matrix - row and column
 	 * We use a nested for loop to go through each row and print it's columns.
@@ -43,14 +44,41 @@ public class Map {
 				}	
 				System.out.println();
 			} 
-		
-		//Map Boundary Checks
-			
-
 	}
 	
+	public void playerMovement() 
+	{	
+		Scanner scanner = new Scanner(System.in);
+		String input = scanner.nextLine();
+	
+		if(input.equals("w")) 
+		{
+		playerRow--;
+		updateDrawMap();
+		}
+	
+		if(input.equals("s")) 
+		{
+		playerRow++;
+		updateDrawMap();
+		}
+	
+		if(input.equals("a")) 
+		{
+		playerCol--;
+		updateDrawMap();
+		}
+	
+		if(input.equals("d")) 
+		{
+		playerCol++;
+		updateDrawMap();
+		}
 	
 	
 }
+
+}
+
 
 
